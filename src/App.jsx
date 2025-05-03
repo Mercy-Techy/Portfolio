@@ -16,7 +16,7 @@ export default function App() {
         {/* About */}
         <section className="bg-gray-900 p-8 rounded-3xl shadow-2xl mb-12">
           <h2 className="text-3xl font-bold text-blue-400 mb-4">About Me</h2>
-          <p className="text-lg leading-relaxed text-gray-300">
+          <p className="text-base leading-relaxed text-gray-300">
             I am a passionate and results-driven Full-Stack Developer with a
             strong focus on backend development and solid experience in frontend
             technologies. Skilled in designing, developing, and maintaining
@@ -34,7 +34,47 @@ export default function App() {
           <div className="space-y-10">
             <div>
               <h3 className="text-xl font-semibold text-white">
-                Doxa - Document-Oriented DBMS (Full Stack)
+                Backend Developer – Lagos State Ministry of Economic Budget and
+                Planning Web Application
+                <span className="block text-sm text-blue-400 mt-1">
+                  [ Not shareable - Company Project ]
+                </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: NestJS, MongoDB, AWS S3, Swagger UI, JWT.
+                </span>
+              </h3>
+              <span className="block text-gray-300 text-base my-2">
+                A web application for the Lagos State Ministry of Economic
+                Planning, featuring both a public website and an admin CMS. The
+                website provides access to departmental reports, publications,
+                and details about principal officers. The CMS enables the
+                management of reports, publications, departments, and officers,
+                including content editing and updates.
+              </span>
+              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
+                <li>
+                  Developed the API using nestjs and integrated MongoDB for data
+                  storage and AWS S3 for file storage.
+                </li>
+                <li>
+                  Implemented and developed authentication endpoints for the CMS
+                  using JWT.
+                </li>
+                <li>
+                  Developed endpoints for the creation and editing of principal
+                  officers, departments and so on. Also developed endpoints for
+                  uploading new reports and publications to AWS.
+                </li>
+                <li>
+                  Developed endpoints for fetching required data for both the
+                  website and the CMS .
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Full Stack Developer – Doxa (Document Oriented DBMS) Web
+                Application
                 <span className="block text-sm text-blue-400 mt-1">
                   [{" "}
                   <a
@@ -42,7 +82,7 @@ export default function App() {
                     target="_blank"
                     className="hover:underline"
                   >
-                    Frontend
+                    Frontend Repo
                   </a>{" "}
                   |{" "}
                   <a
@@ -50,28 +90,98 @@ export default function App() {
                     target="_blank"
                     className="hover:underline"
                   >
-                    Backend
+                    Backend Repo
                   </a>{" "}
                   ]
                 </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: Express.js, MongoDB, Cloudinary, Postman,
+                  TypesScript, React Js, Tanstack Query, Tailwind CSS.
+                </span>
               </h3>
+              <span className="block text-gray-300 text-base my-2">
+                Doxa is a document oriented database management system
+                supporting multimedia storage.
+              </span>
               <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
                 <li>
-                  Built a document-oriented database system supporting
-                  multimedia storage and real-time file viewing (if file is an
-                  image or video).
+                  Developed the API using express js and typescript and
+                  integrated MongoDB for data storage and Cloudinary for media
+                  handling.
                 </li>
                 <li>
-                  Integrated MongoDB for flexible document storage and
-                  Cloudinary for media handling.
+                  Developed endpoints for authentication and also for fetching,
+                  creating, editing, deleting of databases, collections and
+                  documents.
                 </li>
                 <li>
-                  Enabled seamless document retrieval and file downloads via a
-                  user-friendly interface.
+                  Designed the required interfaces based on the UI and
+                  integrated them with the necessary endpoints.
                 </li>
                 <li>
-                  Utilized JavaScript, Express.js, TypeScript, React, Tanstack
-                  Query, MongoDB, and Cloudinary.
+                  Deployed the frontend to vercel and the backend to render.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Backend Developer - Skill Remit Mobile Application
+                <span className="block text-sm text-blue-400 mt-1">
+                  [ Not shareable - Company Project ]
+                </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: NestJS, MongoDB, Cloudinary, Swagger UI, JWT.
+                </span>
+              </h3>
+              <span className="block text-gray-300 text-base my-2">
+                Skill Remit is a mobile application that connects clients with
+                artisans for job opportunities and service requests.
+              </span>
+              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
+                <li>
+                  Developed the API using nestjs and integrated MongoDB for data
+                  storage and Cloudinary for file handling.
+                </li>
+                <li>
+                  Developed endpoints for authentication, for job posting,
+                  application and acceptance, for payment and many more
+                  features.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Full Stack Developer - Afriko Hub Web Application
+                <span className="block text-sm text-blue-400 mt-1">
+                  [ Not shareable - Company Project ]
+                </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: Express.js, MongoDB, Azure, Postman,
+                  TypesScript, React Js, Redux Query, Tailwind CSS
+                </span>
+              </h3>
+              <span className="block text-gray-300 text-base my-2">
+                Afriko Hub is a platform where users (contributors) can upload
+                their images for sale which can be bought by other users.
+              </span>
+              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
+                <li>
+                  Developed the API using express js and typescript and
+                  integrated MongoDB for data storage and Azure for file
+                  handling.
+                </li>
+                <li>
+                  Developed endpoints for authentication, for uploading, viewing
+                  and purchasing of images and endpoints for the admin dashboard
+                  that oversees the whole application.{" "}
+                </li>
+                <li>
+                  Deployed the API to azure and automated redeployment via
+                  github actions.
+                </li>
+                <li>
+                  Integrated the endpoints with the design interfaces developed
+                  by the designer.
                 </li>
               </ul>
             </div>
@@ -89,76 +199,19 @@ export default function App() {
                   </a>{" "}
                   ]
                 </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: React, Tailwind CSS.
+                </span>
               </h3>
+              <span className="block text-gray-300 text-base my-2">
+                A web application that permits the creation, editing and
+                deleting of projects and tasks under each projects.
+              </span>
               <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
                 <li>Enabled the creation, editing and removal of projects.</li>
                 <li>
                   Enabled the creation, editing and removal of task under each
                   projects.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Skill Remit - Artisan Connect API
-                <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
-                </span>
-              </h3>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed an API connecting clients with artisans for job
-                  opportunities.
-                </li>
-                <li>
-                  Implemented job posting, application management, and payment
-                  processing features.
-                </li>
-                <li>
-                  Utilized NestJS, MongoDB, and Cloudinary for efficient backend
-                  operations.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Afriko Hub
-                <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
-                </span>
-              </h3>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed an API that permits the uploading, purchasing, and
-                  download of quality images.
-                </li>
-                <li>Integrated the API with the frontend design.</li>
-                <li>
-                  Utilized JavaScript, Express.js, TypeScript, and MongoDB for
-                  efficient backend operations.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Lagos State Monitoring & Evaluation Platform
-                <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
-                </span>
-              </h3>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Designed a multi-level platform to monitor and evaluate
-                  development activities across pillars, goals, initiatives, and
-                  activities.
-                </li>
-                <li>
-                  Implemented department-level access, role selection, and
-                  reporting features.
-                </li>
-                <li>
-                  Built with a scalable MongoDB schema for performance and
-                  efficiency.
                 </li>
               </ul>
             </div>
