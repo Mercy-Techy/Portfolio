@@ -125,17 +125,25 @@ export default function App() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white">
-                Backend Developer - Skill Remit Mobile Application
+                Backend Developer - Talenter Application
                 <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
+                  [{" "}
+                  <a
+                    href="https://github.com/Mercy-Techy/Talenter"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Repo
+                  </a>{" "}
+                  ]
                 </span>
                 <span className="block text-sm text-blue-400 mt-1 italic">
                   Technologies: NestJS, MongoDB, Cloudinary, Swagger UI, JWT.
                 </span>
               </h3>
               <span className="block text-gray-300 text-base my-2">
-                Skill Remit is a mobile application that connects clients with
-                artisans for job opportunities and service requests.
+                Talenter is an application that connects clients with artisans
+                for job opportunities and service requests.
               </span>
               <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
                 <li>
@@ -212,6 +220,75 @@ export default function App() {
                 <li>
                   Enabled the creation, editing and removal of task under each
                   projects.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Post Partum Depression Website
+                <span className="block text-sm text-blue-400 mt-1">
+                  [{" "}
+                  <a
+                    href="https://github.com/Mercy-Techy/post-partum-depression-model-frontend"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Repo
+                  </a>{" "}
+                  ]
+                </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: React, Tailwind CSS.
+                </span>
+              </h3>
+              <span className="block text-gray-300 text-base my-2">
+                A web application that accepts inputs from users based on how
+                they feel to predict their level of post partum depression.
+              </span>
+              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
+                <li>
+                  Developed the model for predicting the disease and hosted it
+                  on railway.
+                </li>
+                <li>
+                  Developed the user interface using react and tailwind and
+                  hosted it on vercel.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Full Stack Developer - Cebiz Application
+                <span className="block text-sm text-blue-400 mt-1">
+                  [ Not shareable - Company Project ]
+                </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: Express.js, MongoDB, Cloudinary, Swagger ui,
+                  TypesScript, React Js, Tanstack Query, Tailwind CSS
+                </span>
+              </h3>
+              <span className="block text-gray-300 text-base my-2">
+                A fintech mobile and website application that permits
+                transactions and purchase of services such as airtime, data,
+                electricity and so on. Also it connects companies to their
+                staff, giving the company an easy method of managing their
+                members and paying salaries to each member via wallet transfer.
+              </span>
+              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
+                <li>
+                  Developed the API using express js and typescript and
+                  integrated MongoDB for data storage and cloudinary for file
+                  handling.
+                </li>
+                <li>
+                  Developed endpoints for onboarding and authenticating both
+                  normal users and companies, purchasing of services (airtime,
+                  data, electricity and so on), inviting users to a company,
+                  payment of salaries to each member of a company and so on.{" "}
+                </li>
+                <li>
+                  Integrated the endpoints with the website interfaces developed
+                  by the designer.
                 </li>
               </ul>
             </div>
