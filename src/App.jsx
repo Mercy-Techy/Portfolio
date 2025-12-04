@@ -142,7 +142,9 @@ export default function App() {
                 </span>
               </h3>
               <span className="block text-gray-300 text-base my-2">
-                A backend API for creating and managing event-based photo galleries. Event owners can create events, generate unique upload links, and allow guests to upload photos without authentication. Supports real-time updates using Socket.IO, photo moderation, likes/comments, and optional premium features.
+                A backend API for creating and managing event-based photo galleries. Event owners can create events, generate unique upload links, 
+                and allow guests to upload photos without authentication.
+                 Supports optional premium features.
               </span>
               <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
                 <li>
