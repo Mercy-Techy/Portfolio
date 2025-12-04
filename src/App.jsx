@@ -95,7 +95,7 @@ export default function App() {
                   ]
                 </span>
                 <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: Express.js, MongoDB, Cloudinary, Postman,
+                  Technologies: Nodejs, Express.js, MongoDB, Cloudinary, Postman,
                   TypesScript, React Js, Tanstack Query, Tailwind CSS.
                 </span>
               </h3>
@@ -120,6 +120,45 @@ export default function App() {
                 </li>
                 <li>
                   Deployed the frontend to vercel and the backend to render.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white">
+                Backend Developer – EventDrop API
+                <span className="block text-sm text-blue-400 mt-1">
+                  [<a
+                    href="https://github.com/Mercy-Techy/EventDrop-API"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                     Repo
+                  </a>
+                  ]
+                </span>
+                <span className="block text-sm text-blue-400 mt-1 italic">
+                  Technologies: Express.js, PostgreSQL, Cloudinary, Swagger,
+                  TypesScript, Nodejs.
+                </span>
+              </h3>
+              <span className="block text-gray-300 text-base my-2">
+                A backend API for creating and managing event-based photo galleries. Event owners can create events, generate unique upload links, and allow guests to upload photos without authentication. Supports real-time updates using Socket.IO, photo moderation, likes/comments, and optional premium features.
+              </span>
+              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
+                <li>
+                  Developed the API using express js and typescript and
+                  integrated postgreSQL for data storage and Cloudinary for image
+                  storage.
+                </li>
+                <li>
+                  Developed endpoints for sign in, verify email, log in, reset password.
+                </li>
+                <li>
+                  Developed endpoints fetching,
+                  creating, editing of events and also generating of unique links to share event with family and friends 
+                </li>
+                <li>
+                  Developed endpoints for fetching events via generated unique link and also uploading and downloading of images via the link.
                 </li>
               </ul>
             </div>
