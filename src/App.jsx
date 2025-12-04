@@ -344,7 +344,7 @@ export default function App() {
               "Node.js",
               "Express.js",
               "NestJS",
-              "MongoDB",
+              "MongoDB","PostgreSQL",
               "TypeScript",
               "Swagger",
               "Cloudinary",
