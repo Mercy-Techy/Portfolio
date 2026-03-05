@@ -1,414 +1,308 @@
+
+
+
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-gray-100 font-sans">
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-white">Arawole Mercy</h1>
-          <p className="mt-4 text-xl text-blue-400 font-medium">
-            Full Stack Developer
-          </p>
-        </header>
+    <main className="bg-slate-50 text-gray-800 font-sans">
 
-        {/* About */}
-        <section className="bg-gray-900 p-8 rounded-3xl shadow-2xl mb-12">
-          <h2 className="text-3xl font-bold text-blue-400 mb-4">About Me</h2>
-          <p className="text-base leading-relaxed text-gray-300">
-            I am a passionate and results-driven Full-Stack Developer with a
-            strong focus on backend development and solid experience in frontend
-            technologies. Skilled in designing, developing, and maintaining
-            scalable and efficient APIs, as well as building responsive and
-            user-friendly web applications. Experienced in working with modern
-            frameworks to create seamless and high-performing solutions. Thrives
-            in collaborative environments, continuously learning and adapting to
-            new technologies to deliver high-quality software solutions.
-          </p>
-        </section>
+      {/* HERO */}
+      <section className="h-screen flex flex-col justify-center items-center text-center px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-6xl font-extrabold"
+        >
+          Arawole <span className="text-violet-500">Mercy</span>
+        </motion.h1>
 
-        {/* Projects */}
-        <section className="bg-gray-900 p-8 rounded-3xl shadow-2xl mb-12">
-          <h2 className="text-3xl font-bold text-blue-400 mb-6">Projects</h2>
-          <div className="space-y-10">
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Backend Developer – Lagos State Ministry of Economic Budget and
-                Planning Web Application
-                <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: NestJS, MongoDB, AWS S3, Swagger UI, JWT.
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                A web application for the Lagos State Ministry of Economic
-                Planning, featuring both a public website and an admin CMS. The
-                website provides access to departmental reports, publications,
-                and details about principal officers. The CMS enables the
-                management of reports, publications, departments, and officers,
-                including content editing and updates.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the API using nestjs and integrated MongoDB for data
-                  storage and AWS S3 for file storage.
-                </li>
-                <li>
-                  Implemented and developed authentication endpoints for the CMS
-                  using JWT.
-                </li>
-                <li>
-                  Developed endpoints for the creation and editing of principal
-                  officers, departments and so on. Also developed endpoints for
-                  uploading new reports and publications to AWS.
-                </li>
-                <li>
-                  Developed endpoints for fetching required data for both the
-                  website and the CMS .
-                </li>
-              </ul>
+        <p className="text-xl text-gray-600 mt-4">
+          Backend Focused Full Stack Developer
+        </p>
+
+        <div className="flex gap-4 mt-8">
+          <a
+            href="#projects"
+            className="bg-violet-500 text-white px-6 py-3 rounded-lg hover:bg-violet-600 transition"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="#contact"
+            className="border border-violet-500 px-6 py-3 rounded-lg hover:bg-violet-100 transition"
+          >
+            Contact Me
+          </a>
+        </div>
+      </section>
+
+      <div className="max-w-6xl mx-auto px-6">
+
+        {/* ABOUT */}
+        <motion.section
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mb-24"
+        >
+          <h2 className="text-4xl font-bold mb-6">
+            About Me
+            <span className="block h-1 w-20 bg-violet-500 mt-2"></span>
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">
+            I am a passionate and results-driven Full Stack Developer with a
+            strong focus on backend engineering. I specialize in building
+            scalable APIs, designing efficient architectures, and developing
+            responsive web applications that deliver excellent user experience.
+          </p>
+        </motion.section>
+
+        {/* PROJECTS */}
+        <motion.section
+          id="projects"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mb-24"
+        >
+          <h2 className="text-4xl font-bold mb-10">
+            Projects
+            <span className="block h-1 w-20 bg-violet-500 mt-2"></span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+              <h3 className="text-xl font-bold mb-2">Talenter API</h3>
+
+              <p className="text-gray-600 mb-4">
+                It is an API for a platform that connects artisans and clients together. Client request for services from artisans thereby providing job opportunities for artisans
+              </p>
+
+              <a
+                href="https://github.com/Mercy-Techy/Talenter"
+                target="_blank"
+                className="text-violet-500 hover:underline"
+              >
+                View Repository →
+              </a>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Full Stack Developer – Doxa (Document Oriented DBMS) Web
-                Application
-                <span className="block text-sm text-blue-400 mt-1">
-                  [{" "}
-                  <a
-                    href="https://github.com/Mercy-Techy/Doxa-Frontend"
-                    target="_blank"
-                    className="hover:underline"
-                  >
-                    Frontend Repo
-                  </a>{" "}
-                  |{" "}
-                  <a
-                    href="https://github.com/Mercy-Techy/Doxa-Backend"
-                    target="_blank"
-                    className="hover:underline"
-                  >
-                    Backend Repo
-                  </a>{" "}
-                  ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: Nodejs, Express.js, MongoDB, Cloudinary, Postman,
-                  TypesScript, React Js, Tanstack Query, Tailwind CSS.
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                Doxa is a document oriented database management system
-                supporting multimedia storage.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the API using express js and typescript and
-                  integrated MongoDB for data storage and Cloudinary for media
-                  handling.
-                </li>
-                <li>
-                  Developed endpoints for authentication and also for fetching,
-                  creating, editing, deleting of databases, collections and
-                  documents.
-                </li>
-                <li>
-                  Designed the required interfaces based on the UI and
-                  integrated them with the necessary endpoints.
-                </li>
-                <li>
-                  Deployed the frontend to vercel and the backend to render.
-                </li>
-              </ul>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+              <h3 className="text-xl font-bold mb-2">VisualStock API</h3>
+
+              <p className="text-gray-600 mb-4">
+                It is an Api for a content repository that allows individuals to sell their images and videos on the platform, while also providing users with easy access to high-quality visual content for their personal or professional needs.
+              </p>
+
+              <a
+                href="https://github.com/Mercy-Techy/VisualStock"
+                target="_blank"
+                className="text-violet-500 hover:underline"
+              >
+                View Repository →
+              </a>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Backend Developer – EventDrop API
-                <span className="block text-sm text-blue-400 mt-1">
-                  [<a
-                    href="https://github.com/Mercy-Techy/EventDrop-API"
-                    target="_blank"
-                    className="hover:underline"
-                  >
-                     Repo
-                  </a>
-                  ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: Express.js, PostgreSQL, Cloudinary, Swagger,
-                  TypesScript, Nodejs.
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                A backend API for creating and managing event-based photo galleries. Event owners can create events, generate unique upload links, 
-                and allow guests to upload photos without authentication.
-                 Supports optional premium features.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the API using express js and typescript and
-                  integrated postgreSQL for data storage and Cloudinary for image
-                  storage.
-                </li>
-                <li>
-                  Developed endpoints for sign in, verify email, log in, reset password.
-                </li>
-                <li>
-                  Developed endpoints fetching,
-                  creating, editing of events and also generating of unique links to share event with family and friends 
-                </li>
-                <li>
-                  Developed endpoints for fetching events via generated unique link and also uploading and downloading of images via the link.
-                </li>
-              </ul>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+              <h3 className="text-xl font-bold mb-2">EventDrop</h3>
+
+              <p className="text-gray-600 mb-4">
+                A website for creating and managing event-based photo galleries. Event owners can create events, generate unique upload links, and allow guests to upload photos without authentication. Supports real-time updates using Socket.IO, photo moderation, likes/comments, and optional premium features.
+              </p>
+
+              <div className="flex gap-4">
+                <a
+                href="https://github.com/Mercy-Techy/EventDrop-Website"
+                target="_blank"
+                className="text-violet-500 hover:underline"
+              >
+                View Repository →
+              </a>
+                <a
+                href="https://event-drop-website.vercel.app/"
+                target="_blank"
+                className="text-violet-500 hover:underline"
+              >
+                Live Link →
+              </a>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Backend Developer - Talenter Application
-                <span className="block text-sm text-blue-400 mt-1">
-                  [{" "}
-                  <a
-                    href="https://github.com/Mercy-Techy/Talenter"
-                    target="_blank"
-                    className="hover:underline"
-                  >
-                    Repo
-                  </a>{" "}
-                  ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: NestJS, MongoDB, Cloudinary, Swagger UI, JWT.
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                Talenter is an application that connects clients with artisans
-                for job opportunities and service requests.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the API using nestjs and integrated MongoDB for data
-                  storage and Cloudinary for file handling.
-                </li>
-                <li>
-                  Developed endpoints for authentication, for job posting,
-                  application and acceptance, for payment and many more
-                  features.
-                </li>
-              </ul>
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+              <h3 className="text-xl font-bold mb-2">EventDrop API</h3>
+
+              <p className="text-gray-600 mb-4">
+                An API for a platform for creating and managing event-based photo galleries. Event owners can create events, generate unique upload links, and allow guests to upload photos without authentication. Supports real-time updates using Socket.IO, photo moderation, likes/comments, and optional premium features.
+              </p>
+
+              <a
+                href="https://github.com/Mercy-Techy/EventDrop-API"
+                target="_blank"
+                className="text-violet-500 hover:underline"
+              >
+                View Repository →
+              </a>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Full Stack Developer - Afriko Hub Web Application
-                <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: Express.js, MongoDB, Azure, Postman,
-                  TypesScript, React Js, Redux Query, Tailwind CSS
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                Afriko Hub is a platform where users (contributors) can upload
-                their images for sale which can be bought by other users.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the API using express js and typescript and
-                  integrated MongoDB for data storage and Azure for file
-                  handling.
-                </li>
-                <li>
-                  Developed endpoints for authentication, for uploading, viewing
-                  and purchasing of images and endpoints for the admin dashboard
-                  that oversees the whole application.{" "}
-                </li>
-                <li>
-                  Deployed the API to azure and automated redeployment via
-                  github actions.
-                </li>
-                <li>
-                  Integrated the endpoints with the design interfaces developed
-                  by the designer.
-                </li>
-              </ul>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+              <h3 className="text-xl font-bold mb-2">Doxa Document DBMS</h3>
+
+              <p className="text-gray-600 mb-4">
+                Document oriented DBMS supporting multimedia storage with a
+                full stack web interface.
+              </p>
+
+              <div className="flex gap-4">
+                <a
+                  href="https://github.com/Mercy-Techy/Doxa-Backend"
+                  target="_blank"
+                  className="text-violet-500 hover:underline"
+                >
+                  Backend →
+                </a>
+
+                <a
+                  href="https://github.com/Mercy-Techy/Doxa-Frontend"
+                  target="_blank"
+                  className="text-violet-500 hover:underline"
+                >
+                  Frontend →
+                </a>
+                <a
+                  href="https://doxa-rho.vercel.app"
+                  target="_blank"
+                  className="text-violet-500 hover:underline"
+                >
+                  Live Link →
+                </a>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Project Management App
-                <span className="block text-sm text-blue-400 mt-1">
-                  [{" "}
-                  <a
-                    href="https://github.com/Mercy-Techy/project-management-app"
-                    target="_blank"
-                    className="hover:underline"
-                  >
-                    Repo
-                  </a>{" "}
-                  ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: React, Tailwind CSS.
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                A web application that permits the creation, editing and
-                deleting of projects and tasks under each projects.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>Enabled the creation, editing and removal of projects.</li>
-                <li>
-                  Enabled the creation, editing and removal of task under each
-                  projects.
-                </li>
-              </ul>
+
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+              <h3 className="text-xl font-bold mb-2">Chat-app API</h3>
+
+              <p className="text-gray-600 mb-4">
+                A simple REST Chat API built with Node.js and Express. It allows creating users, sending messages, and retrieving chat history between two users. The project is intentionally basic and easy to extend.
+              </p>
+
+              <a
+                href="https://github.com/Mercy-Techy/EventDrop-API"
+                target="_blank"
+                className="text-violet-500 hover:underline"
+              >
+                View Repository →
+              </a>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Post Partum Depression Website
-                <span className="block text-sm text-blue-400 mt-1">
-                  [{" "}
-                  <a
-                    href="https://github.com/Mercy-Techy/post-partum-depression-model-frontend"
-                    target="_blank"
-                    className="hover:underline"
-                  >
-                    Repo
-                  </a>{" "}
-                  ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: React, Tailwind CSS.
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                A web application that accepts inputs from users based on how
-                they feel to predict their level of post partum depression.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the model for predicting the disease and hosted it
-                  on railway.
-                </li>
-                <li>
-                  Developed the user interface using react and tailwind and
-                  hosted it on vercel.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white">
-                Full Stack Developer - Cebiz Application
-                <span className="block text-sm text-blue-400 mt-1">
-                  [ Not shareable - Company Project ]
-                </span>
-                <span className="block text-sm text-blue-400 mt-1 italic">
-                  Technologies: Express.js, MongoDB, Cloudinary, Swagger ui,
-                  TypesScript, React Js, Tanstack Query, Tailwind CSS
-                </span>
-              </h3>
-              <span className="block text-gray-300 text-base my-2">
-                A fintech mobile and website application that permits
-                transactions and purchase of services such as airtime, data,
-                electricity and so on. Also it connects companies to their
-                staff, giving the company an easy method of managing their
-                members and paying salaries to each member via wallet transfer.
-              </span>
-              <ul className="list-disc list-inside ml-4 text-base text-gray-300 marker:text-blue-400">
-                <li>
-                  Developed the API using express js and typescript and
-                  integrated MongoDB for data storage and cloudinary for file
-                  handling.
-                </li>
-                <li>
-                  Developed endpoints for onboarding and authenticating both
-                  normal users and companies, purchasing of services (airtime,
-                  data, electricity and so on), inviting users to a company,
-                  payment of salaries to each member of a company and so on.{" "}
-                </li>
-                <li>
-                  Integrated the endpoints with the website interfaces developed
-                  by the designer.
-                </li>
-              </ul>
-            </div>
+
           </div>
-        </section>
+        </motion.section>
 
-        {/* Skills */}
-        <section className="bg-gray-900 p-8 rounded-3xl shadow-2xl mb-12">
-          <h2 className="text-3xl font-bold text-blue-400 mb-6">Skills</h2>
+        {/* SKILLS */}
+        <motion.section
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mb-24"
+        >
+          <h2 className="text-4xl font-bold mb-10">
+            Skills
+            <span className="block h-1 w-20 bg-violet-500 mt-2"></span>
+          </h2>
+
           <div className="flex flex-wrap gap-3">
             {[
+              "JavaScript","TypeScript",
               "Node.js",
               "Express.js",
               "NestJS",
-              "MongoDB","PostgreSQL",
-              "TypeScript",
+              "MongoDB",
+              "PostgreSQL",
+              "React",
+              "Tailwind",
+              "Tanstack Query",
               "Swagger",
               "Cloudinary",
-              "Postman",
-              "Python",
               "Git",
-              "HTML",
-              "CSS",
-              "Bootstrap",
-              "React.js",
-              "Tailwind CSS",
-              "Redux Query",
-              "Tanstack Query",
             ].map((skill) => (
               <span
                 key={skill}
-                className="bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md"
+                className="bg-violet-100 text-violet-600 px-4 py-2 rounded-full text-sm"
               >
                 {skill}
               </span>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        {/* Contact */}
-        <section className="bg-gray-900 p-8 rounded-3xl shadow-2xl">
-          <h2 className="text-3xl font-bold text-blue-400 mb-6">Contact</h2>
-          <ul className="space-y-4 text-lg text-gray-300">
-            <li className="flex items-center gap-2">
-              <FaEnvelope className="text-blue-400" />
-              <a
-                href="mailto:oluwagbemiro65@gmail.com"
-                className="hover:underline"
-              >
+        {/* CONTACT */}
+        <motion.section
+          id="contact"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-4xl font-bold mb-10">
+            Contact
+            <span className="block h-1 w-20 bg-violet-500 mt-2"></span>
+          </h2>
+
+          <ul className="space-y-4 text-lg text-gray-700">
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-violet-500" />
+              <a href="mailto:oluwagbemiro65@gmail.com">
                 oluwagbemiro65@gmail.com
               </a>
             </li>
-            <li className="flex items-center gap-2">
-              <FaPhone className="text-blue-400" />
+
+            <li className="flex items-center gap-3">
+              <FaPhone className="text-violet-500" />
               07025859461
             </li>
-            <li className="flex items-center gap-2">
-              <FaGithub className="text-blue-400" />
-              <a
-                href="https://github.com/Mercy-Techy"
-                className="hover:underline"
-                target="_blank"
-              >
+
+            <li className="flex items-center gap-3">
+              <FaGithub className="text-violet-500" />
+              <a href="https://github.com/Mercy-Techy" target="_blank">
                 github.com/Mercy-Techy
               </a>
             </li>
-            <li className="flex items-center gap-2">
-              <FaLinkedin className="text-blue-400" />
+
+            <li className="flex items-center gap-3">
+              <FaLinkedin className="text-violet-500" />
               <a
                 href="https://www.linkedin.com/in/arawole-mercy-37b799264"
-                className="hover:underline"
                 target="_blank"
               >
                 linkedin.com/in/arawole-mercy-37b799264
               </a>
             </li>
           </ul>
-        </section>
-      </section>
+        </motion.section>
+
+        <footer className="text-center text-gray-500 pb-10">
+          © {new Date().getFullYear()} Arawole Mercy
+        </footer>
+
+      </div>
     </main>
   );
 }
