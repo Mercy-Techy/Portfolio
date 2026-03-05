@@ -203,7 +203,7 @@ export default function App() {
               </p>
 
               <a
-                href="https://github.com/Mercy-Techy/EventDrop-API"
+                href="https://github.com/Mercy-Techy/chat-app-backend"
                 target="_blank"
                 className="text-violet-500 hover:underline"
               >
